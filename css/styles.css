@@ -597,10 +597,10 @@ a { color: inherit; }
   box-shadow: var(--sombra-sticker);
   background: var(--crema-sombra);
   display: flex;
+  height: 420px;
 }
 
 .ubicacion__mapa iframe {
-  min-height: 360px;
   display: block;         /* ← agrega esto */
   width: 100%;            /* ← agrega esto */
   height: 100%;           /* ← agrega esto */
@@ -929,6 +929,10 @@ a { color: inherit; }
   }
 
   .productos__grid { grid-template-columns: 1fr 1fr; }
+
+  .ubicacion__mapa {
+    height: 300px;
+  }
 }
 
 @media (max-width: 480px) {
