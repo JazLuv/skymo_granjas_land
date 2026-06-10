@@ -1,0 +1,9 @@
+{
+  "name": "skymo-helados",
+  "version": "1.0.0",
+  "description": "Landing page para Skymo Helados",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 3000 || npx http-server"
+  }
+}
