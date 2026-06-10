@@ -596,9 +596,17 @@ a { color: inherit; }
   overflow: hidden;
   box-shadow: var(--sombra-sticker);
   background: var(--crema-sombra);
+  display: flex;
 }
 
-.ubicacion__mapa iframe { min-height: 360px; }
+.ubicacion__mapa iframe {
+  min-height: 360px;
+  display: block;         /* ← agrega esto */
+  width: 100%;            /* ← agrega esto */
+  height: 100%;           /* ← agrega esto */
+  flex: 1;                /* ← agrega esto */
+  border: 0;  
+}
 
 /* ==========================================================================
    5. GALERÍA / CARRUSEL
