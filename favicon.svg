@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Paleta roja mordida de Skymo Helados -->
+  <rect x="16" y="4" width="32" height="44" rx="16" fill="#E8242A" stroke="#471F73" stroke-width="4"/>
+  <!-- Mordida -->
+  <circle cx="48" cy="12" r="9" fill="#5B2D8E"/>
+  <!-- Brillo -->
+  <path d="M25 14 q0 10 0 14" stroke="#FFF8F0" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <!-- Palito -->
+  <line x1="32" y1="48" x2="32" y2="60" stroke="#C98A4B" stroke-width="6" stroke-linecap="round"/>
+</svg>

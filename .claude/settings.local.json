@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem D:\\\\skymos\\\\assets | ForEach-Object { \"$\\($_.Name\\) = $\\($_.Length\\) bytes\" })",
+      "PowerShell(node --check D:\\\\skymos\\\\js\\\\main.js; if \\($?\\) { \"JS OK\" }; Get-ChildItem D:\\\\skymos -Recurse -File | Select-Object FullName, Length)",
+      "PowerShell($dirs = Get-ChildItem \"$env:USERPROFILE\\\\.claude\\\\plugins\\\\cache\\\\thedotmack\\\\claude-mem\" -Directory -ErrorAction SilentlyContinue | Sort-Object Name -Descending; if \\($dirs\\) { $p = $dirs[0].FullName; \"Plugin dir: $p\"; Get-ChildItem \"$p\" | Select-Object -ExpandProperty Name } else { \"no cache dir\"; Get-ChildItem \"$env:USERPROFILE\\\\.claude\\\\plugins\\\\marketplaces\\\\thedotmack\" -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Name })",
+      "PowerShell($f = Get-Content \"C:\\\\Users\\\\Principal\\\\.claude\\\\plugins\\\\marketplaces\\\\thedotmack\\\\plugin\\\\scripts\\\\worker-wrapper.cjs\" -Raw; $i = $f.IndexOf\\(\"CLAUDE_MEM_MANAGED\"\\); $f.Substring\\([Math]::Max\\(0,$i-400\\), 800\\))",
+      "PowerShell($bytes = [System.IO.File]::ReadAllBytes\\(\"D:\\\\skymos\\\\assets\\\\logo.png\"\\)[0..31]; \\($bytes | ForEach-Object { if \\($_ -ge 32 -and $_ -le 126\\) { [char]$_ } else { \".\" } }\\) -join \"\")",
+      "PowerShell($b = [System.IO.File]::ReadAllBytes\\(\"D:\\\\skymos\\\\assets\\\\logo-convertido.png\"\\); \"Dimensiones: $\\([System.BitConverter]::ToUInt32\\($b[19..16],0\\)\\) x $\\([System.BitConverter]::ToUInt32\\($b[23..20],0\\)\\)\"; \"ColorType: $\\($b[25]\\) \\(6=RGBA con alpha, 2=RGB sin alpha\\)\")",
+      "PowerShell(Copy-Item *)"
+    ]
+  },
+  "skillOverrides": {
+    "docx": "off",
+    "pdf": "off",
+    "pptx": "off"
+  }
+}
